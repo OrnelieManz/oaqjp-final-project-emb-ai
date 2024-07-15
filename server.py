@@ -21,6 +21,8 @@ def sent_analyzer():
     fear = response['fear']
     joy = response['joy']
 
+    if dominant_emotion is None:
+        return "Invalid input! Try again"
     return f"For the given statement, the system response is \'anger\': {anger}, \'disgust\': {disgust}, \'fear\': {fear}, \'joy\': {joy} and \'sadness\': {sadness}. The dominant emotion is {dominant_emotion}."
 
 @app.route("/")
